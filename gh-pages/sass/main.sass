@@ -1,0 +1,419 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "header"
+@import "button"
+
+@mixin title
+	
+	padding-top: 75px
+	.title-text
+		h2
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			font-size: 24pt
+			 
+			margin: 0
+			font-family: OpenSansExtraBold, 800
+			
+		p
+			margin: 0
+			color: #CDCFD1
+			font-size: 14pt
+			display: flex
+			white-space: nowrap
+			align-items: center
+			justify-content: center
+		.text-line
+			margin: 0 20px
+		.text-line-p
+			&::before, &::after
+				content: ''
+				height: 1px
+				width: 4% 
+				background-color: #CDCFD1
+				display: inline-block
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $accent
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	&.ishome
+		
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.text-content
+	text-align: center
+	float: none
+	width: 100%
+	h2
+		font-size: 48pt
+	padding-top: 150px
+	padding-bottom: 60px
+	text-transform: uppercase
+	line-height: 1
+
+
+.main-head
+	height: 800px
+.head-line
+	padding-top: 10px
+	background: rgba(0,0,0,.2)
+.logo
+	display: inline-block
+	h1
+		font-size: 28pt
+		font-family: Pacificoregular-main, sans-serif
+		color: #fff
+		font-weight: normal
+	a
+		text-decoration: none
+		font-size: 13px
+	
+.logo-text
+	display: inline-block
+	a
+		text-decoration: none
+		color: #787F80
+	
+.nav-line
+	ul
+		margin: 0
+		padding-top: 20px
+		li
+			display: inline
+			margin-right: 5px
+			
+		a
+			display: inline-block
+   			position: relative
+   			text-decoration: none
+			color: #fff
+			padding-right: 5px
+			&:hover
+				color: $accent
+				text-decoration: none
+
+.welcome
+	line-height: 1.1
+	padding-top: 350px
+	font-family: OpenSansLight, 200
+	h1
+		text-align: center
+		color: #fff
+		font-size: 83px
+		font-weight: normal 
+		margin: 0
+	p
+		margin: 0
+		color: #fff
+		font-size: 64px
+		display: flex
+		white-space: nowrap
+		align-items: center
+		justify-content: center
+		.color-text
+			color: $accent
+			margin-right: 15px
+		.text-line
+			font-size: 24px
+			margin: 30px	
+	.text-line-p
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 5%
+			background-color: $accent
+			display: inline-block
+
+.soc-buttons
+	padding-top: 50px
+	font-size: 20px
+	a
+		color: #515E61
+		margin: 0 8px
+		&:hover
+			color: #fff
+
+.features
+	background-color: #F4F7F9
+	@include title
+
+.features-slider
+	padding-bottom: 50px
+	.owl-dots
+		position: absolute
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin: 0 5px
+			width: 8px
+			height: 8px
+			
+			border: 1px solid #CDCFD1
+			border-radius: 10em
+			cursor: pointer
+			outline: none
+			transition: background-color .25s ease
+			&.active
+				background-color: #000
+				border: 1px solid #000
+.features-slider-item
+	
+	padding-top: 70px
+	color: #000
+	font-family: OpenSansRegular
+	img
+		text-align: center
+		padding-top: 10px
+		max-width: 40px	
+		min-width: 40px
+	h3
+		font-family: OpenSansSemiBold
+
+.s-works
+	@include title
+	.works-title
+		padding-top: 20px
+		padding-bottom: 20px
+		font-size: 12pt
+		color: #000
+		text-align: center
+	.works-slider
+		&-item
+			.works-item-img	
+				.wrap-img
+					position: relative
+				.wrap
+  				width: 300px
+  				height: 200px
+  				background: rgba(32, 180, 150, 0.75)
+  				opacity: 0
+  				position: absolute
+  				text-align: center
+  				font-size: 30px
+  				transition: all 1s ease
+				.wrap-img:hover .wrap
+						opacity: 1
+			
+				
+
+		
+.s-our-team
+	@include title
+	padding-bottom: 100px
+	.works-title
+		padding-top: 20px
+		padding-bottom: 20px
+		font-size: 12pt
+		color: #000
+		text-align: center
+	.our-team-slider
+		.owl-dots
+			position: absolute
+			width: 100%
+			text-align: center
+			margin: 10px 0 
+		.owl-dot
+			display: inline-block
+			margin: 0 5px
+			width: 8px
+			height: 8px
+			
+			border: 1px solid #CDCFD1
+			border-radius: 10em
+			cursor: pointer
+			outline: none
+			transition: background-color .25s ease
+			&.active
+				background-color: #000
+				border: 1px solid #000
+		.our-team-slider-item
+			margin: 10px
+			text-align: center
+			.item-content
+				position: relative
+				img
+					max-width: 100%
+  					height: auto
+			.item-text
+				padding-top: 20px
+				color: black
+				font-family: OpenSansSemiBold
+				line-height: 0.5
+				.item-text-name
+					font-size: 18pt
+				.item-text-position
+					font-size: 11pt
+					color: #A0A4A9
+			.wrap-info
+				display: flex
+				flex-direction: column
+				position: absolute
+				top: 0
+ 				left: 0
+ 				right: 0
+ 				bottom: 0
+ 				padding: 1em
+				background: rgba(32,180,150,.85)
+				opacity: 0
+				transition: opacity .7s
+  				cursor: pointer
+  				font: 16pt OpenSansRegular
+  				letter-spacing: 3px
+				min-height: 100%
+				.wrap-info-text
+					margin: 15px
+					flex-grow: 1
+				.item-soc-b
+					font-size: 22px
+					margin-top: -50px
+					a
+						line-height: 2.5
+						margin: 0 5px
+						text-decoration: none
+						color: #fff
+						&:hover
+							color: #000
+						
+			&:hover .item-text-name
+				color: $accent
+			&:hover .wrap-info
+				opacity: 1
+				color: white
+
+.s-some-sun-facts
+	@include title
+	padding-top: 100px
+	min-height: 600px
+	background: linear-gradient( rgba(23, 82, 110, 0.6), rgba(23, 82, 110, 0.7) ), url(../img/sect-bg.png) no-repeat center center
+	background-size: cover
+	
+	.facts-slider-main-item
+		user-select: none
+		text-align: center
+		display: block
+		padding-top: 50px
+		color: #fff
+		text-transform: uppercase
+		line-height: 1
+		img
+			max-width: 130px
+			height: auto
+			margin: 0 auto
+		h3
+			padding-top: 30px
+			font-family: OpenSansSemiBold, 600
+			font-size: 50pt
+
+.s-discuss
+	@include title
+	.works-title
+		padding-top: 20px
+		padding-bottom: 20px
+		font-size: 12pt
+		color: #000
+		text-align: center
+	.soc-button
+
+		font-size: 23px
+		a
+			color: #ccc
+			margin: 0 8px
+			&:hover
+				color: #6A737B
+	.contacts
+		line-height: 1
+		color: #6A737B
+		h3
+			color: black
+			font-family: OpenSansRegular
+			font-size: 18pt
+	.discuss-form
+		.input-name
+			padding: 15px 0 
+			border: none
+			border-bottom: solid 1px #CCCCCC
+		.input-email
+			padding: 15px 0
+			border: none
+			border-bottom: solid 1px #CCCCCC
+		.textarea-message
+			padding: 15px 0
+			border: none
+			border-bottom: solid 1px #CCCCCC
+		.button-sub
+			padding: 5px
+			margin: 10px
+			margin-right: 50px
+			float: right
+			border: none
+			background: none
+			border-radius: 5px
+			&:hover
+				background: rgba(1,1,1,.05)
+			.sub-icon
+				color: $accent
+
+.footer-map
+	img
+		margin-top: 100px
+		width: 100
+		height: 300px
+		border-bottom: 4px solid #000
+
+.footer-content
+	background: $accent
+	padding: 100px 0
+	color: #fff
+	.foot-text
+		h2
+			font-family: Pacificoregular-main, sans-serif
+			font-size: 36px
+			font-weight: normal
+	.input-sub
+		background: none
+		border-radius: 5px
+		border: 2px solid #fff
+		position: absolute
+	.sub-text
+		padding-top: 30px
+	.fc
+		position: absolute
+		bottom: 0
+		right: 0
+
+
+@import "media" // Always at the end
